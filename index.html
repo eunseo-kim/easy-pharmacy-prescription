@@ -25,7 +25,7 @@
                 <div>1박스(140개) / 1판(14개)</div>
               </div>
               <div class="drug-radio">
-                <input type="radio" name="drug" id="haru" />
+                <input type="radio" name="drug" id="HARU-D" checked />
                 <label id="radio-label">HARU-D</label>
               </div>
             </li>
@@ -35,7 +35,7 @@
                 <div>1박스(84개) / 1판(21개)</div>
               </div>
               <div class="drug-radio">
-                <input type="radio" name="drug" id="opal" />
+                <input type="radio" name="drug" id="OPAL" />
                 <label id="radio-label">OPAL</label>
               </div>
             </li>
@@ -45,7 +45,7 @@
                 <div>1박스(28개) / 1판(7개)</div>
               </div>
               <div class="drug-radio">
-                <input type="radio" name="drug" id="pills" />
+                <input type="radio" name="drug" id="ELSE" />
                 <label id="radio-label">28개입</label>
               </div>
             </li>
@@ -54,7 +54,7 @@
         <div class="drug-input">
           <span id="drug-input__text">약의 개수를 입력해주세요.</span>
           <form id="drug-input__form">
-            <input type="number" class="drug-count" pattern="\d*" placeholder="개수 입력" />
+            <input required type="number" class="drug-count" pattern="\d*" placeholder="개수 입력" />
             <input type="submit" value="계산" />
             <input type="reset" value="리셋" />
           </form>
@@ -66,19 +66,19 @@
     <h1 id="result-content__text">이렇게 조제해주시면 돼요.</h1>
     <ul class="result-content">
       <li>
-        <div id="box__number" class="result-box">1</div>
+        <div id="box__number" class="result-box"></div>
         <div id="box__text result-text">박스</div>
       </li>
       <li>
-        <div id="plate__number" class="result-box">1</div>
+        <div id="plate__number" class="result-box"></div>
         <div id="plate__text result-text">판</div>
       </li>
       <li>
-        <div id="line__number" class="result-box">1</div>
+        <div id="line__number" class="result-box"></div>
         <div id="line__text result-text">줄</div>
       </li>
       <li>
-        <div id="space__number" class="result-box">1</div>
+        <div id="space__number" class="result-box"></div>
         <div id="space__text result-text">칸</div>
       </li>
     </ul>

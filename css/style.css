@@ -202,16 +202,16 @@ input[type="radio"] + label {
 
 /* 결과 나오는 박스 */
 .result-box {
-  width: 80px;
+  width: 83px;
   height: 60px;
   line-height: 55px;
   text-align: center;
-  border: 3px solid rgb(217, 205, 230);
+  /* border: 3px solid rgb(214, 197, 230); */
   background-color: rgb(255, 255, 255);
   color: rgb(64, 58, 117);
-  box-shadow: rgb(192, 188, 228) 0px 4px 16px 0px;
+  box-shadow: rgb(199, 194, 235) 0px 4px 20px 0px;
   margin-right: 7px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 /* footer */
