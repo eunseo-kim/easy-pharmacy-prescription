@@ -24,7 +24,6 @@ h1 {
   color: rgb(75, 68, 139);
   width: 100%;
   background-color: rgb(254, 254, 255);
-  padding-left: 20px;
   height: 120px;
   line-height: 120px;
   /* border-bottom: 1px solid rgb(116, 112, 153); */
@@ -236,4 +235,62 @@ footer .my_info {
 footer .copyright {
   font-size: 15px;
   color: rgb(255, 255, 255);
+}
+@media only screen and (max-width: 768px) {
+  #title {
+    font-size: 35px;
+  }
+  #input-content__text,
+  #drug-input__text,
+  #result-content__text {
+    font-size: 25px;
+  }
+  #drug-info img {
+    width: 7rem;
+    height: 6rem;
+  }
+
+  #drug-info {
+    width: 150px;
+    font-size: 12px;
+  }
+  input[type="radio"] {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  #radio-label {
+    font-size: 20px;
+  }
+  #drug-input__form {
+    margin-right: 60px;
+  }
+  #drug-input__form input[type="number"] {
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  #drug-input__form input[type="submit"],
+  #drug-input__form input[type="reset"] {
+    width: 40%;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .result-box {
+    width: 55px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .result-content {
+    font-size: 20px;
+  }
+
+  .result-content li {
+    display: flex;
+    padding: 10px;
+  }
 }
