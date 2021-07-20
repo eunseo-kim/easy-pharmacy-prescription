@@ -1,0 +1,239 @@
+ul {
+  list-style: none;
+}
+html,
+body,
+h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.main {
+  padding: 5px;
+}
+
+#title {
+  position: relative;
+  z-index: 1;
+  font-family: "Roboto Slab", serif;
+  font-size: 50px;
+  font-weight: lighter;
+  color: rgb(75, 68, 139);
+  width: 100%;
+  background-color: rgb(254, 254, 255);
+  padding-left: 20px;
+  height: 120px;
+  line-height: 120px;
+  /* border-bottom: 1px solid rgb(116, 112, 153); */
+  text-align: center;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 16px 0px;
+}
+
+.input-content {
+  background: linear-gradient(rgb(232, 232, 255), rgb(255, 255, 255));
+}
+
+#input-content__text,
+#drug-input__text {
+  color: rgb(65, 57, 134);
+  font-size: 30px;
+  padding-left: 40px;
+  padding-top: 40px;
+  font-weight: bold;
+}
+
+#drug-info {
+  font-family: "Noto Serif KR", serif;
+  color: rgb(151, 148, 179);
+  font-weight: bolder;
+}
+
+#drug-info img {
+  width: 10rem;
+  height: 9rem;
+}
+
+#drug-info h3 {
+  margin: 0px;
+  font-size: 20px;
+}
+
+.drugs {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.drugs li {
+  margin: 10px;
+}
+
+#drug-info {
+  position: relative;
+  z-index: 0;
+  padding: 15px 10px;
+  background-color: #fff;
+  width: 200px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 10px;
+  border-radius: 8px;
+  box-shadow: rgb(218, 215, 241) 0px 4px 16px 0px;
+}
+
+.drug-radio {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+input[type="radio"] {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+input[type="radio"] + label {
+  font-size: 30px;
+  float: left;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  padding-left: 10px;
+  font-weight: bolder;
+}
+
+#drug-input__form {
+  margin-top: 10px;
+  padding-left: 40px;
+  /* background-color: aqua; */
+  /* padding-bottom: 50px; */
+  font-size: 30px;
+}
+
+.drug-input {
+  padding-top: 40px;
+  border-top: 1px solid rgb(211, 210, 214);
+}
+
+#drug-input__form input {
+  border: none;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+#drug-input__form input[type="number"] {
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 25px;
+  box-shadow: rgb(218, 215, 241) 0px 4px 16px 0px;
+}
+
+#drug-input__form input[type="number"]:focus {
+  border-radius: 25px;
+  outline: none;
+  border: 1px solid rgb(198, 194, 233);
+  box-shadow: rgb(192, 188, 228) 0px 4px 16px 0px;
+}
+
+#drug-input__form input[type="submit"],
+#drug-input__form input[type="reset"] {
+  width: 150px;
+  height: 53px;
+  font-size: 20px;
+  background-color: rgb(75, 68, 139);
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+#drug-input__form input[type="submit"]:hover,
+#drug-input__form input[type="reset"]:hover {
+  cursor: pointer;
+  border: 4px solid rgb(214, 197, 230);
+  background-color: rgb(234, 226, 250);
+  color: rgb(64, 58, 117);
+}
+
+/* dots */
+.dots {
+  text-align: center;
+  color: rgb(226, 226, 226);
+  font-size: 100px;
+}
+
+/* 계산 결과 부분 */
+
+#result-content__text {
+  color: rgb(65, 57, 134);
+  font-size: 30px;
+  padding-top: 70px;
+  font-weight: bold;
+  padding-left: 40px;
+}
+
+.result-content {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 30px;
+  width: 100%;
+  height: 300px;
+  line-height: 60px;
+  font-weight: bolder;
+  /* background: linear-gradient(rgb(255, 255, 255), rgb(232, 232, 255)); */
+
+  /* background: linear-gradient(rgb(255, 255, 255), rgb(232, 232, 255)); */
+}
+
+.result-content li {
+  display: flex;
+  padding: 20px;
+}
+
+/* 결과 나오는 박스 */
+.result-box {
+  width: 80px;
+  height: 60px;
+  line-height: 55px;
+  text-align: center;
+  border: 3px solid rgb(217, 205, 230);
+  background-color: rgb(255, 255, 255);
+  color: rgb(64, 58, 117);
+  box-shadow: rgb(192, 188, 228) 0px 4px 16px 0px;
+  margin-right: 7px;
+  border-radius: 15px;
+}
+
+/* footer */
+footer {
+  padding-top: 10px;
+  bottom: 0;
+  padding-bottom: 30px;
+  height: 100px;
+  background-color: rgb(64, 58, 117);
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid rgb(92, 102, 102);
+}
+
+footer .my_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+footer .copyright {
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
