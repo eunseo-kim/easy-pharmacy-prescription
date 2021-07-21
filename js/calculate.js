@@ -12,9 +12,7 @@ let space = 0;
 
 function drugCountSubmit(event) {
   event.preventDefault();
-  console.log(drugCount);
   let drugNumber = drugCount.value;
-  console.log(drugNumber);
   const drugName = document.querySelector("input[name='drug']:checked").id;
   if (drugName === "HARU-D") {
     box = parseInt(drugNumber / 140);
@@ -47,4 +45,12 @@ function drugCountSubmit(event) {
   space_text.innerText = space;
 }
 
+function resetCalculateResult(event) {
+  box_text.innerText = "";
+  plate_text.innerText = "";
+  line_text.innerText = "";
+  space_text.innerText = "";
+}
+
 drugCountForm.addEventListener("submit", drugCountSubmit);
+drugCountForm.addEventListener("reset", resetCalculateResult);
