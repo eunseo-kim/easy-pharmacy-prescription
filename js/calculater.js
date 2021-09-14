@@ -32,8 +32,9 @@ function equalTo() {
     a = ans;
     document.querySelector(".screen").innerHTML = ans || "";
   } catch {
-    ans = 0;
-    document.querySelector(".screen").innerHTML = "수식 오류!";
+    ans = "";
+    clearScr();
+    document.querySelector(".expression").innerHTML = "수식 오류!";
   }
 
   while (num.length > 0) {
@@ -61,8 +62,7 @@ function deleteScr() {
   const newScr = currentScr.substr(0, currentScr.length - 1);
   document.querySelector(".screen").innerHTML = newScr;
   a = newScr;
-  num.pop();
-  num.push(newScr);
+  num = [newScr];
 }
 
 function offCalculater() {
