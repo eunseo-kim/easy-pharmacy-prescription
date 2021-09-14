@@ -11,21 +11,25 @@ h1 {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+input {
+  text-decoration: none;
+  border: none;
+}
+
 .main {
   padding: 5px;
 }
 
 #title {
-  position: relative;
   z-index: 1;
   font-family: "Roboto Slab", serif;
-  font-size: 50px;
+  font-size: 1.4em;
   font-weight: lighter;
   color: rgb(75, 68, 139);
   width: 100%;
   background-color: rgb(254, 254, 255);
-  height: 120px;
-  line-height: 120px;
+  height: 2em;
+  line-height: 2em;
   /* border-bottom: 1px solid rgb(116, 112, 153); */
   text-align: center;
   box-shadow: rgb(0 0 0 / 10%) 0px 4px 16px 0px;
@@ -36,88 +40,71 @@ h1 {
 }
 
 #input-content__text,
-#drug-input__text {
+#drug-input__text,
+#result-content__text {
   color: rgb(65, 57, 134);
-  font-size: 30px;
-  padding-left: 40px;
-  padding-top: 40px;
+  font-size: 1em;
   font-weight: bold;
 }
 
-#drug-info {
-  font-family: "Noto Serif KR", serif;
-  color: rgb(151, 148, 179);
-  font-weight: bolder;
+#input-content__text,
+.drug-input,
+#result-content__text {
+  padding-left: 1em;
+  padding-top: 1em;
 }
 
-#drug-info img {
-  width: 10rem;
-  height: 9rem;
-}
-
-#drug-info h3 {
-  margin: 0px;
-  font-size: 20px;
-}
-
-.drugs {
-  padding: 0;
+.choose-drug {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 40px;
+  padding: 0;
+  margin-top: 0;
 }
 
-.drugs li {
-  margin: 10px;
+.drug-info {
+  background-color: white;
+  margin: 0.5em;
+  border-radius: 0.3em;
+  box-shadow: rgba(75, 68, 139, 0.2) 0px 7px 20px 0px;
 }
 
-#drug-info {
-  position: relative;
-  z-index: 0;
-  padding: 15px 10px;
-  background-color: #fff;
-  width: 200px;
-  text-align: center;
+.drug-info img {
+  width: 5em;
+  height: 4em;
+}
+
+.drug-info p {
   margin: 0;
-  padding: 20px 10px;
-  border-radius: 8px;
-  box-shadow: rgb(218, 215, 241) 0px 4px 16px 0px;
+  font-size: 0.8em;
 }
 
-.drug-radio {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
+.drug-info #info {
+  font-size: 0.5em;
+}
+
+.drug {
+  display: none;
+}
+
+.drug + label {
+  float: left;
   text-align: center;
+  padding: 0.4em;
+  border-radius: 0.2em;
 }
 
-input[type="radio"] {
-  width: 40px;
-  height: 40px;
+.drug + label:hover {
   cursor: pointer;
 }
 
-input[type="radio"] + label {
-  font-size: 30px;
-  float: left;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  padding-left: 10px;
-  font-weight: bolder;
-}
-
-#drug-input__form {
-  margin-top: 10px;
-  padding-left: 40px;
-  /* background-color: aqua; */
-  /* padding-bottom: 50px; */
-  font-size: 30px;
+input[type="radio"]:checked + label {
+  background-color: rgba(126, 114, 233, 0.2);
+  border: 3px solid rgb(156, 148, 221);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 0.3em;
 }
 
 .drug-input {
-  padding-top: 40px;
   border-top: 1px solid rgb(211, 210, 214);
 }
 
@@ -127,56 +114,50 @@ input[type="radio"] + label {
   padding-left: 10px;
 }
 
-#drug-input__form input[type="number"] {
-  width: 300px;
-  height: 50px;
-  font-size: 20px;
+.drug-count {
+  width: 6em;
+  height: 2em;
+  font-size: 1em;
+  padding-left: 0.4em;
   border-radius: 25px;
   box-shadow: rgb(218, 215, 241) 0px 4px 16px 0px;
+  margin-top: 10px;
 }
 
-#drug-input__form input[type="number"]:focus {
+.drug-count:focus {
   border-radius: 25px;
   outline: none;
   border: 1px solid rgb(198, 194, 233);
   box-shadow: rgb(192, 188, 228) 0px 4px 16px 0px;
 }
 
-#drug-input__form input[type="submit"],
-#drug-input__form input[type="reset"] {
-  width: 150px;
-  height: 53px;
-  font-size: 20px;
-  background-color: rgb(75, 68, 139);
-  color: white;
-  border-radius: 30px;
+.calculate,
+.reset {
+  width: 4.5em;
+  height: 2em;
   font-weight: bold;
+  border-radius: 3px;
+  margin-left: 3px;
+  font-size: 0.8em;
+  box-shadow: rgba(0, 0, 0, 0.3) 0.5px 0.5px 4px;
+  background-color: rgb(236, 236, 236);
 }
 
-#drug-input__form input[type="submit"]:hover,
-#drug-input__form input[type="reset"]:hover {
+.calculate:hover,
+.reset:hover {
   cursor: pointer;
-  border: 4px solid rgb(214, 197, 230);
-  background-color: rgb(234, 226, 250);
-  color: rgb(64, 58, 117);
+  border: 1px solid rgb(145, 145, 145);
 }
 
 /* dots */
 .dots {
   text-align: center;
+  vertical-align: middle;
   color: rgb(226, 226, 226);
-  font-size: 100px;
+  font-size: 2.5em;
 }
 
 /* 계산 결과 부분 */
-
-#result-content__text {
-  color: rgb(65, 57, 134);
-  font-size: 30px;
-  padding-top: 70px;
-  font-weight: bold;
-  padding-left: 40px;
-}
 
 .result-content {
   margin: 0;
@@ -184,33 +165,25 @@ input[type="radio"] + label {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-size: 30px;
-  width: 100%;
-  height: 200px;
-  line-height: 60px;
-  font-weight: bolder;
-  /* background: linear-gradient(rgb(255, 255, 255), rgb(232, 232, 255)); */
-
-  /* background: linear-gradient(rgb(255, 255, 255), rgb(232, 232, 255)); */
+  margin: 5px 0 20px 0;
 }
 
 .result-content li {
   display: flex;
-  padding: 20px;
+  padding: 5px;
 }
 
 /* 결과 나오는 박스 */
 .result-box {
-  width: 83px;
-  height: 60px;
-  line-height: 55px;
+  width: 2em;
+  height: 1.6em;
   text-align: center;
   /* border: 3px solid rgb(214, 197, 230); */
   background-color: rgb(255, 255, 255);
   color: rgb(64, 58, 117);
-  box-shadow: rgb(199, 194, 235) 0px 4px 20px 0px;
-  margin-right: 7px;
-  border-radius: 10px;
+  border: 1px solid rgb(150, 144, 204);
+  margin-right: 2px;
+  border-radius: 3px;
 }
 
 /* footer */
@@ -218,7 +191,7 @@ footer {
   padding-top: 10px;
   bottom: 0;
   padding-bottom: 30px;
-  height: 100px;
+  height: 3em;
   background-color: rgb(64, 58, 117);
   align-items: center;
   text-align: center;
@@ -229,71 +202,132 @@ footer .my_info {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 5px;
 }
 
 footer .copyright {
-  font-size: 15px;
+  font-size: 0.5em;
   color: rgb(255, 255, 255);
 }
-@media only screen and (max-width: 768px) {
-  #title {
-    font-size: 30px;
-  }
-  #input-content__text,
-  #drug-input__text,
-  #result-content__text {
-    font-size: 25px;
-  }
-  #drug-info img {
-    width: 7rem;
-    height: 6rem;
-  }
 
-  #drug-info {
-    width: 150px;
-    font-size: 12px;
-  }
-  input[type="radio"] {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-  }
+/* 계산기 모달 */
+.hidden {
+  display: none;
+}
 
-  #radio-label {
-    font-size: 20px;
-  }
-  #drug-input__form {
-    margin-right: 60px;
-  }
-  #drug-input__form input[type="number"] {
-    width: 100%;
-    height: 45px;
-    font-size: 18px;
-  }
+table {
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-spacing: 7px;
+}
 
-  #drug-input__form input[type="submit"],
-  #drug-input__form input[type="reset"] {
-    width: 40%;
-    height: 48px;
-    font-size: 18px;
-  }
+td {
+  width: 3em;
+  height: 3em;
+  text-align: center;
+  font-size: 1em;
+  background-color: rgb(231, 231, 231);
+  border-radius: 10em;
+  font-weight: bold;
+}
 
-  .result-box {
-    width: 70px;
-    height: 50px;
-    line-height: 50px;
-  }
+.purple {
+  color: #4f00ce;
+}
 
-  .result-content {
-    font-size: 30px;
-    margin-bottom: 80px;
-  }
+td:active {
+  background-color: #e0e0d1;
+}
 
-  .result-content li {
-    display: flex;
-    padding-right: 10px;
-    padding-top: 20px;
-    line-height: 50px;
+.expression {
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 2em;
+  line-height: 3em;
+  padding: 0 10px;
+}
+
+.screen {
+  height: 2em;
+  line-height: 2.5em;
+  margin: 0 auto;
+  font-size: 2em;
+  color: #000000;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0 10px;
+  max-width: 220px;
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.equals {
+  background-color: rgb(165, 155, 255);
+  color: white;
+}
+
+.all-clear {
+  color: rgb(238, 56, 56);
+}
+
+.calculater {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(36, 36, 36, 0.7); /* 배경 어둡게 */
+}
+
+.calculater-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  margin: 0 auto; /* horizontally centreing an element */
+  border-radius: 20px;
+  padding: 10px 15px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+/* 계산기 버튼 */
+.calculater-button {
+  position: fixed;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 10em 0 0 10em;
+  right: 0;
+  top: 50px;
+  color: rgb(53, 40, 170);
+}
+
+.calculater-button i {
+  font-size: 20px;
+}
+
+.calculater-button:checked {
+  background-color: gray;
+}
+
+.off-button {
+  font-size: 3em;
+  margin: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+@media only screen and (max-width: 576px) {
+  .choose-drug {
+    justify-content: center;
   }
 }
