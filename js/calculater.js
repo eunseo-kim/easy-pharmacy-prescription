@@ -36,7 +36,6 @@ function equalTo() {
   }
 
   while (num.length > 0) {
-    console.log("pop");
     num.pop();
   }
   try {

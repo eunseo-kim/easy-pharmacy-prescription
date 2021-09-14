@@ -13,7 +13,6 @@ let line = 0;
 let space = 0;
 
 function drugCountSubmit(event) {
-  event.preventDefault();
   let drugNumber = drugCount.value;
   const drugName = document.querySelector(".drug:checked").id;
   if (drugName === "haru") {
@@ -59,4 +58,10 @@ calculate.addEventListener("click", drugCountSubmit);
 reset.addEventListener("click", resetCalculateResult);
 drugCount.addEventListener("click", () => {
   drugCount.value = "";
+});
+
+drugCount.addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) {
+    drugCountSubmit();
+  }
 });
