@@ -30,7 +30,7 @@ function equalTo() {
   try {
     ans = eval(b);
     a = ans;
-    document.querySelector(".screen").innerHTML = ans || "";
+    document.querySelector(".screen").innerHTML = ans;
   } catch {
     ans = "";
     clearScr();
