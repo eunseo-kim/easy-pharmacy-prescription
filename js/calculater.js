@@ -29,6 +29,7 @@ function equalTo() {
 
   try {
     ans = eval(b);
+    a = ans;
     document.querySelector(".screen").innerHTML = ans || "";
   } catch {
     ans = 0;
@@ -57,8 +58,11 @@ function clearScr() {
 
 function deleteScr() {
   const currentScr = document.querySelector(".screen").innerHTML;
-  document.querySelector(".screen").innerHTML = currentScr.substr(0, currentScr.length - 1);
+  const newScr = currentScr.substr(0, currentScr.length - 1);
+  document.querySelector(".screen").innerHTML = newScr;
+  a = newScr;
   num.pop();
+  num.push(newScr);
 }
 
 function offCalculater() {
