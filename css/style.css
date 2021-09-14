@@ -21,7 +21,7 @@ input {
 }
 
 #title {
-  z-index: 1;
+  z-index: 1000;
   font-family: "Roboto Slab", serif;
   font-size: 1.6em;
   font-weight: lighter;
@@ -32,7 +32,7 @@ input {
   line-height: 2em;
   /* border-bottom: 1px solid rgb(116, 112, 153); */
   text-align: center;
-  box-shadow: rgb(0 0 0 / 10%) 0px 4px 16px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .input-content {
@@ -69,8 +69,9 @@ input {
 }
 
 .drug-info img {
-  width: 9em;
-  height: 8em;
+  width: 6em;
+  height: 5em;
+  padding: 0 0.5em;
 }
 
 .drug-info p {
@@ -189,14 +190,9 @@ input[type="radio"]:checked + label {
 
 /* footer */
 footer {
-  padding-top: 10px;
-  bottom: 0;
-  padding-bottom: 30px;
-  height: 3em;
-  background-color: rgb(64, 58, 117);
-  align-items: center;
-  text-align: center;
-  border-top: 1px solid rgb(92, 102, 102);
+  padding-top: 3em;
+  text-align: right;
+  padding-right: 10px;
 }
 
 footer .my_info {
@@ -207,7 +203,8 @@ footer .my_info {
 
 footer .copyright {
   font-size: 0.5em;
-  color: rgb(255, 255, 255);
+  color: rgb(155, 155, 155);
+  bottom: 0;
 }
 
 /* 계산기 모달 */
@@ -290,7 +287,7 @@ td:active {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999;
+  z-index: 2;
   background-color: rgb(255, 255, 255);
   width: fit-content;
   margin: 0 auto; /* horizontally centreing an element */
@@ -302,7 +299,7 @@ td:active {
 /* 계산기 버튼 */
 .calculater-button {
   position: fixed;
-  padding: 10px 10px 10px 15px;
+  padding: 10px 10px 10px 10px;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 10em 0 0 10em;
@@ -320,7 +317,7 @@ td:active {
 }
 
 .off-button {
-  font-size: 3em;
+  font-size: 2em;
   margin: 10px;
   background-color: transparent;
   border: none;
