@@ -23,7 +23,7 @@ input {
 #title {
   z-index: 1;
   font-family: "Roboto Slab", serif;
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-weight: lighter;
   color: rgb(75, 68, 139);
   width: 100%;
@@ -43,7 +43,7 @@ input {
 #drug-input__text,
 #result-content__text {
   color: rgb(65, 57, 134);
-  font-size: 1em;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
@@ -69,8 +69,8 @@ input {
 }
 
 .drug-info img {
-  width: 5em;
-  height: 4em;
+  width: 9em;
+  height: 8em;
 }
 
 .drug-info p {
@@ -115,7 +115,7 @@ input[type="radio"]:checked + label {
 }
 
 .drug-count {
-  width: 6em;
+  width: 8em;
   height: 2em;
   font-size: 1em;
   padding-left: 0.4em;
@@ -137,8 +137,8 @@ input[type="radio"]:checked + label {
   height: 2em;
   font-weight: bold;
   border-radius: 3px;
-  margin-left: 3px;
-  font-size: 0.8em;
+  margin-left: 10px;
+  font-size: 1em;
   box-shadow: rgba(0, 0, 0, 0.3) 0.5px 0.5px 4px;
   background-color: rgb(236, 236, 236);
 }
@@ -166,6 +166,7 @@ input[type="radio"]:checked + label {
   flex-wrap: wrap;
   justify-content: center;
   margin: 5px 0 20px 0;
+  font-size: 1.3em;
 }
 
 .result-content li {
@@ -224,7 +225,7 @@ td {
   width: 3em;
   height: 3em;
   text-align: center;
-  font-size: 1em;
+  font-size: 1.3em;
   background-color: rgb(231, 231, 231);
   border-radius: 10em;
   font-weight: bold;
@@ -301,17 +302,17 @@ td:active {
 /* 계산기 버튼 */
 .calculater-button {
   position: fixed;
-  padding: 10px;
+  padding: 10px 10px 10px 15px;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 10em 0 0 10em;
   right: 0;
-  top: 50px;
+  top: 60px;
   color: rgb(53, 40, 170);
 }
 
 .calculater-button i {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .calculater-button:checked {
@@ -329,5 +330,22 @@ td:active {
 @media only screen and (max-width: 576px) {
   .choose-drug {
     justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .drug-info img {
+    width: 5em;
+    height: 4em;
+  }
+  .calculate,
+  .reset {
+    font-size: 1em;
+  }
+  .result-content {
+    font-size: 1em;
+  }
+  td {
+    font-size: 1em;
   }
 }

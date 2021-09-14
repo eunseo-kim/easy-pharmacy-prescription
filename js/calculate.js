@@ -39,7 +39,6 @@ function drugCountSubmit(event) {
     line = 0;
     space = drugNumber;
   }
-  console.log(box, plate, line, space);
   box_text.innerText = box;
   plate_text.innerText = plate;
   line_text.innerText = line;
@@ -61,6 +60,7 @@ drugCount.addEventListener("click", () => {
 });
 
 drugCount.addEventListener("keyup", (e) => {
+  console.log(e.keyCode);
   if (e.keyCode === 13) {
     drugCountSubmit();
   }
